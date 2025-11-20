@@ -136,3 +136,6 @@ ADD COLUMN RegisteredDate DATE;
 
 ALTER TABLE invoices
 CHANGE paymentdate paymenttime TIME;
+
+DELETE FROM invoices 
+WHERE appointid IN (SELECT appointid FROM appointments WHERE animalid = 2);
