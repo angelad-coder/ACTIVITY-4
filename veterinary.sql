@@ -149,3 +149,9 @@ FROM animals;
 
 SELECT SUM(totalamount) AS total_sales
 FROM invoices;
+
+SELECT COUNT(*)
+FROM appointments a
+JOIN animals n ON a.animalid = n.animalid
+JOIN owners o ON o.ownerid = n.ownerid
+WHERE o.ofirstname = 'Maria';
